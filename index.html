@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=360, initial-scale=1.0" />
+    <title>Quizflix</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div
+        id="cronometro"
+        style="
+          position: absolute;
+          top: 18px;
+          right: 18px;
+          background: rgba(90, 3, 3, 0.7);
+          color: #fff;
+          font-size: 28px;
+          font-family: monospace;
+          padding: 8px 18px;
+          border-radius: 12px;
+          z-index: 10;
+          display: none;
+        "
+      >
+        40
+      </div>
+
+      <div
+        id="tela-capa"
+        class="tela ativa"
+        style="background-image: url('img/inicio.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 500px; left: 90px; width: 160px; height: 50px"
+          onclick="mudarTela('tela-faseUm')"
+        ></button>
+      </div>
+
+      <div
+        id="tela-faseUm"
+        class="tela"
+        style="background-image: url('img/fase1.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 490px; left: 110px; width: 160px; height: 40px"
+          onclick="mudarTela('pergunta1')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta1"
+        class="tela"
+        style="background-image: url('img/3.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta2"
+        class="tela"
+        style="background-image: url('img/4.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta3"
+        class="tela"
+        style="background-image: url('img/5.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta4"
+        class="tela"
+        style="background-image: url('img/6.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta5"
+        class="tela"
+        style="background-image: url('img/7.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta6"
+        class="tela"
+        style="background-image: url('img/8.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta7"
+        class="tela"
+        style="background-image: url('img/9.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta8"
+        class="tela"
+        style="background-image: url('img/10.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta9"
+        class="tela"
+        style="background-image: url('img/11.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="pergunta10"
+        class="tela"
+        style="background-image: url('img/12.png')"
+      >
+        <button
+          class="botao-transparente"
+          style="top: 350px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('A')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 430px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('B')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 502px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('C')"
+        ></button>
+        <button
+          class="botao-transparente"
+          style="top: 580px; left: 30px; width: 270px; height: 50px"
+          onclick="responder('D')"
+        ></button>
+      </div>
+
+      <div
+        id="tela-resultado"
+        class="tela"
+        style="
+          background: linear-gradient(135deg, #292929 60%, #2b0000 100%);
+          color: #ffffff;
+          text-align: center;
+          padding: 40px 20px 30px 20px;
+          font-size: 22px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+          height: 100%;
+          box-sizing: border-box;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 24px;
+          box-shadow: 0 8px 32px #a42f26(90, 11, 11, 0.5),
+            0 2px 8px rgba(0, 0, 0, 0.3);
+          border: 2px solid #ffffff;
+          animation: resultadoFadeIn 0.7s;
+        "
+      >
+        <p
+          style="
+            margin: 0 0 18px 0;
+            font-weight: 600;
+            font-size: 22px;
+            color: #ffffff;
+            text-shadow: 0 0 8px #a42f26(255, 100, 100, 0.7);
+            letter-spacing: 1px;
+          "
+        >
+          Você deve acertar
+          <span style="color: #a42f26; font-weight: bold">5 ou mais</span> para
+          avançar
+        </p>
+        <p
+          id="resultado-texto"
+          style="
+            margin: 0 0 24px 0;
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-shadow: 0 0 12px #a42f26, 0 0 4px #fff;
+            background: #a42f26(90, 11, 11, 0.3);
+            border-radius: 12px;
+            padding: 12px 0;
+            box-shadow: 0 2px 12px #292929;
+            transition: background 0.3s;
+          "
+        >
+          Você acertou X de 10 perguntas!
+        </p>
+
+        <button
+          onclick="window.location.href='index2.html'"
+          Avançar
+          id="btn-avancar"
+          style="
+            display: none;
+            margin-top: 10px;
+            padding: 16px 36px;
+            font-size: 22px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #a53030 60%, #842323 100%);
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(217, 76, 76, 0.6);
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background 0.3s, box-shadow 0.3s;
+          "
+          onmouseover="this.style.background='linear-gradient(90deg,#a53030 60%,#d94c4c 100%)'; this.style.boxShadow='0 6px 24px rgba(165, 48, 48, 0.8)';"
+          onmouseout="this.style.background='linear-gradient(90deg,#d94c4c 60%,#a53030 100%)'; this.style.boxShadow='0 4px 16px rgba(217, 76, 76, 0.6)';"
+          onclick="avancarFase2()"
+        >
+          Avançar
+        </button>
+
+        <button
+          id="btn-tentar"
+          style="
+            display: none;
+            margin-top: 10px;
+            padding: 16px 36px;
+            font-size: 22px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #a53030 60%, #842323 100%);
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(217, 76, 76, 0.6);
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background 0.3s, box-shadow 0.3s;
+          "
+          onclick="tentarNovamente()"
+        >
+          Tente novamente
+        </button>
+        <style>
+          @keyframes resultadoFadeIn {
+            from {
+              opacity: 0;
+              transform: scale(0.95);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        </style>
+      </div>
+    </div>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

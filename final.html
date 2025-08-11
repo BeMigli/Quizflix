@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=360, initial-scale=1.0" />
+    <title>Quizflix</title>
+    <link rel="stylesheet" href="./CSS/style2.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div
+        id="cronometro"
+        style="
+          position: absolute;
+          top: 18px;
+          right: 18px;
+          background: rgba(90, 3, 3, 0.7);
+          color: #fff;
+          font-size: 28px;
+          font-family: monospace;
+          padding: 8px 18px;
+          border-radius: 12px;
+          z-index: 10;
+          display: none;
+        "
+      >
+        40
+      </div>
+
+         
+      <div
+  id="tela-capa"
+  class="tela ativa"
+  style="background-image: url('img/final.png')"
+>
+<button
+  class="botao-transparente"
+  style="top: 500px; left: 90px; width: 160px; height: 50px"
+  onclick="window.location.href='index.html'"
+></button>
+</div>
+
+
+    <script src="./JS/script2.js"></script>
+  </body>
+</html>
